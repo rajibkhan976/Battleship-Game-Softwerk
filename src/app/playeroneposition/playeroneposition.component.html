@@ -1,15 +1,13 @@
 <div class="container">
-  <div class="row">
     <app-playertwoplay
     [firstPlayerCarrierPosition]="playerOneCarrierPosition"
     [firstPlayerFrigatePosition]="playerOneFrigatePosition"
     [firstPlayerCruiserPosition]="playerOneCruiserPosition"
     [firstPlayerSubmarinePosition]="playerOneSubmarinePosition"
     [firstPlayerDestroyerPosition]="playerOneDestroyerPosition">
-  </app-playertwoplay>
-  </div>
+    </app-playertwoplay>
   <div class="row">
-    <div class="col-4">
+    <div class="col-12">
       <h2 class="text-success">{{playerOne}}</h2>
       <div class="battleShipOptions">
         <h3>Select battleship</h3>
@@ -26,7 +24,9 @@
       </div>
       <h4>{{instructionOne}}</h4>
     </div>
-    <div class="col-8">
+  </div>
+  <div class="row">
+    <div class="col-12">
       <div class="battleshipGridContainer">
         <div id="horizontalIdentifier">
           <span class="alphabeticIdentifier">A</span>

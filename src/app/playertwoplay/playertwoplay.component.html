@@ -1,152 +1,154 @@
-<div class="col-12">
-  <div id="playerTwoGrid" class="battleshipGridContainer">
-    <div id="horizontalIdentifier">
-      <span class="alphabeticIdentifier">A</span>
-      <span class="alphabeticIdentifier">B</span>
-      <span class="alphabeticIdentifier">C</span>
-      <span class="alphabeticIdentifier">D</span>
-      <span class="alphabeticIdentifier">E</span>
-      <span class="alphabeticIdentifier">F</span>
-      <span class="alphabeticIdentifier">G</span>
-      <span class="alphabeticIdentifier">H</span>
-      <span class="alphabeticIdentifier">I</span>
-      <span class="alphabeticIdentifier">J</span>
+<div class="row">
+  <div class="col-12">
+    <div id="playerTwoGrid" class="battleshipGridContainer">
+      <div id="horizontalIdentifier">
+        <span class="alphabeticIdentifier">A</span>
+        <span class="alphabeticIdentifier">B</span>
+        <span class="alphabeticIdentifier">C</span>
+        <span class="alphabeticIdentifier">D</span>
+        <span class="alphabeticIdentifier">E</span>
+        <span class="alphabeticIdentifier">F</span>
+        <span class="alphabeticIdentifier">G</span>
+        <span class="alphabeticIdentifier">H</span>
+        <span class="alphabeticIdentifier">I</span>
+        <span class="alphabeticIdentifier">J</span>
+      </div>
+      <div id="verticalIdentifier">
+        <span class="numericalIdentifier">1</span>
+        <span class="numericalIdentifier">2</span>
+        <span class="numericalIdentifier">3</span>
+        <span class="numericalIdentifier">4</span>
+        <span class="numericalIdentifier">5</span>
+        <span class="numericalIdentifier">6</span>
+        <span class="numericalIdentifier">7</span>
+        <span class="numericalIdentifier">8</span>
+        <span class="numericalIdentifier">9</span>
+        <span class="numericalIdentifier">10</span>
+      </div>
+      <table class="player" width="75%">
+        <tbody>
+          <tr>
+            <td [ngClass]="playerTwoStrikeSignal ('1A')" (click)="playerTwoStrike ('1A')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('1B')" (click)="playerTwoStrike ('1B')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('1C')" (click)="playerTwoStrike ('1C')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('1D')" (click)="playerTwoStrike ('1D')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('1E')" (click)="playerTwoStrike ('1E')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('1F')" (click)="playerTwoStrike ('1F')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('1G')" (click)="playerTwoStrike ('1G')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('1H')" (click)="playerTwoStrike ('1H')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('1I')" (click)="playerTwoStrike ('1I')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('1J')" (click)="playerTwoStrike ('1J')"></td>
+          </tr>
+          <tr>
+            <td [ngClass]="playerTwoStrikeSignal ('2A')" (click)="playerTwoStrike ('2A')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('2B')" (click)="playerTwoStrike ('2B')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('2C')" (click)="playerTwoStrike ('2C')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('2D')" (click)="playerTwoStrike ('2D')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('2E')" (click)="playerTwoStrike ('2E')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('2F')" (click)="playerTwoStrike ('2F')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('2G')" (click)="playerTwoStrike ('2G')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('2H')" (click)="playerTwoStrike ('2H')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('2I')" (click)="playerTwoStrike ('2I')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('2J')" (click)="playerTwoStrike ('2J')"></td>
+          </tr>
+          <tr>
+            <td [ngClass]="playerTwoStrikeSignal ('3A')" (click)="playerTwoStrike ('3A')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('3B')" (click)="playerTwoStrike ('3B')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('3C')" (click)="playerTwoStrike ('3C')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('3D')" (click)="playerTwoStrike ('3D')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('3E')" (click)="playerTwoStrike ('3E')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('3F')" (click)="playerTwoStrike ('3F')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('3G')" (click)="playerTwoStrike ('3G')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('3H')" (click)="playerTwoStrike ('3H')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('3I')" (click)="playerTwoStrike ('3I')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('3J')" (click)="playerTwoStrike ('3J')"></td>
+          </tr>
+          <tr>
+            <td [ngClass]="playerTwoStrikeSignal ('4A')" (click)="playerTwoStrike ('4A')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('4B')" (click)="playerTwoStrike ('4B')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('4C')" (click)="playerTwoStrike ('4C')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('4D')" (click)="playerTwoStrike ('4D')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('4E')" (click)="playerTwoStrike ('4E')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('4F')" (click)="playerTwoStrike ('4F')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('4G')" (click)="playerTwoStrike ('4G')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('4H')" (click)="playerTwoStrike ('4H')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('4I')" (click)="playerTwoStrike ('4I')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('4J')" (click)="playerTwoStrike ('4J')"></td>
+          </tr>
+          <tr>
+            <td [ngClass]="playerTwoStrikeSignal ('5A')" (click)="playerTwoStrike ('5A')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('5B')" (click)="playerTwoStrike ('5B')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('5C')" (click)="playerTwoStrike ('5C')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('5D')" (click)="playerTwoStrike ('5D')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('5E')" (click)="playerTwoStrike ('5E')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('5F')" (click)="playerTwoStrike ('5F')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('5G')" (click)="playerTwoStrike ('5G')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('5H')" (click)="playerTwoStrike ('5H')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('5I')" (click)="playerTwoStrike ('5I')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('5J')" (click)="playerTwoStrike ('5J')"></td>
+          </tr>
+          <tr>
+            <td [ngClass]="playerTwoStrikeSignal ('6A')" (click)="playerTwoStrike ('6A')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('6B')" (click)="playerTwoStrike ('6B')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('6C')" (click)="playerTwoStrike ('6C')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('6D')" (click)="playerTwoStrike ('6D')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('6E')" (click)="playerTwoStrike ('6E')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('6F')" (click)="playerTwoStrike ('6F')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('6G')" (click)="playerTwoStrike ('6G')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('6H')" (click)="playerTwoStrike ('6H')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('6I')" (click)="playerTwoStrike ('6I')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('6J')" (click)="playerTwoStrike ('6J')"></td>
+          </tr>
+          <tr>
+            <td [ngClass]="playerTwoStrikeSignal ('7A')" (click)="playerTwoStrike ('7A')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('7B')" (click)="playerTwoStrike ('7B')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('7C')" (click)="playerTwoStrike ('7C')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('7D')" (click)="playerTwoStrike ('7D')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('7E')" (click)="playerTwoStrike ('7E')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('7F')" (click)="playerTwoStrike ('7F')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('7G')" (click)="playerTwoStrike ('7G')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('7H')" (click)="playerTwoStrike ('7H')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('7I')" (click)="playerTwoStrike ('7I')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('7J')" (click)="playerTwoStrike ('7J')"></td>
+          </tr>
+          <tr>
+            <td [ngClass]="playerTwoStrikeSignal ('8A')" (click)="playerTwoStrike ('8A')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('8B')" (click)="playerTwoStrike ('8B')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('8C')" (click)="playerTwoStrike ('8C')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('8D')" (click)="playerTwoStrike ('8D')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('8E')" (click)="playerTwoStrike ('8E')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('8F')" (click)="playerTwoStrike ('8F')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('8G')" (click)="playerTwoStrike ('8G')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('8H')" (click)="playerTwoStrike ('8H')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('8I')" (click)="playerTwoStrike ('8I')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('8J')" (click)="playerTwoStrike ('8J')"></td>
+          </tr>
+          <tr>
+            <td [ngClass]="playerTwoStrikeSignal ('9A')" (click)="playerTwoStrike ('9A')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('9B')" (click)="playerTwoStrike ('9B')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('9C')" (click)="playerTwoStrike ('9C')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('9D')" (click)="playerTwoStrike ('9D')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('9E')" (click)="playerTwoStrike ('9E')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('9F')" (click)="playerTwoStrike ('9F')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('9G')" (click)="playerTwoStrike ('9G')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('9H')" (click)="playerTwoStrike ('9H')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('9I')" (click)="playerTwoStrike ('9I')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('9J')" (click)="playerTwoStrike ('9J')"></td>
+          </tr>
+          <tr>
+            <td [ngClass]="playerTwoStrikeSignal ('10A')" (click)="playerTwoStrike ('10A')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('10B')" (click)="playerTwoStrike ('10B')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('10C')" (click)="playerTwoStrike ('10C')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('10D')" (click)="playerTwoStrike ('10D')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('10E')" (click)="playerTwoStrike ('10E')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('10F')" (click)="playerTwoStrike ('10F')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('10G')" (click)="playerTwoStrike ('10G')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('10H')" (click)="playerTwoStrike ('10H')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('10I')" (click)="playerTwoStrike ('10I')"></td>
+            <td [ngClass]="playerTwoStrikeSignal ('10J')" (click)="playerTwoStrike ('10J')"></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <div id="verticalIdentifier">
-      <span class="numericalIdentifier">1</span>
-      <span class="numericalIdentifier">2</span>
-      <span class="numericalIdentifier">3</span>
-      <span class="numericalIdentifier">4</span>
-      <span class="numericalIdentifier">5</span>
-      <span class="numericalIdentifier">6</span>
-      <span class="numericalIdentifier">7</span>
-      <span class="numericalIdentifier">8</span>
-      <span class="numericalIdentifier">9</span>
-      <span class="numericalIdentifier">10</span>
-    </div>
-    <table class="player" width="75%">
-      <tbody>
-        <tr>
-          <td [ngClass]="playerTwoStrikeSignal ('1A')" (click)="playerTwoStrike ('1A')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('1B')" (click)="playerTwoStrike ('1B')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('1C')" (click)="playerTwoStrike ('1C')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('1D')" (click)="playerTwoStrike ('1D')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('1E')" (click)="playerTwoStrike ('1E')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('1F')" (click)="playerTwoStrike ('1F')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('1G')" (click)="playerTwoStrike ('1G')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('1H')" (click)="playerTwoStrike ('1H')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('1I')" (click)="playerTwoStrike ('1I')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('1J')" (click)="playerTwoStrike ('1J')"></td>
-        </tr>
-        <tr>
-          <td [ngClass]="playerTwoStrikeSignal ('2A')" (click)="playerTwoStrike ('2A')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('2B')" (click)="playerTwoStrike ('2B')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('2C')" (click)="playerTwoStrike ('2C')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('2D')" (click)="playerTwoStrike ('2D')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('2E')" (click)="playerTwoStrike ('2E')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('2F')" (click)="playerTwoStrike ('2F')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('2G')" (click)="playerTwoStrike ('2G')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('2H')" (click)="playerTwoStrike ('2H')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('2I')" (click)="playerTwoStrike ('2I')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('2J')" (click)="playerTwoStrike ('2J')"></td>
-        </tr>
-        <tr>
-          <td [ngClass]="playerTwoStrikeSignal ('3A')" (click)="playerTwoStrike ('3A')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('3B')" (click)="playerTwoStrike ('3B')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('3C')" (click)="playerTwoStrike ('3C')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('3D')" (click)="playerTwoStrike ('3D')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('3E')" (click)="playerTwoStrike ('3E')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('3F')" (click)="playerTwoStrike ('3F')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('3G')" (click)="playerTwoStrike ('3G')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('3H')" (click)="playerTwoStrike ('3H')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('3I')" (click)="playerTwoStrike ('3I')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('3J')" (click)="playerTwoStrike ('3J')"></td>
-        </tr>
-        <tr>
-          <td [ngClass]="playerTwoStrikeSignal ('4A')" (click)="playerTwoStrike ('4A')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('4B')" (click)="playerTwoStrike ('4B')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('4C')" (click)="playerTwoStrike ('4C')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('4D')" (click)="playerTwoStrike ('4D')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('4E')" (click)="playerTwoStrike ('4E')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('4F')" (click)="playerTwoStrike ('4F')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('4G')" (click)="playerTwoStrike ('4G')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('4H')" (click)="playerTwoStrike ('4H')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('4I')" (click)="playerTwoStrike ('4I')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('4J')" (click)="playerTwoStrike ('4J')"></td>
-        </tr>
-        <tr>
-          <td [ngClass]="playerTwoStrikeSignal ('5A')" (click)="playerTwoStrike ('5A')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('5B')" (click)="playerTwoStrike ('5B')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('5C')" (click)="playerTwoStrike ('5C')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('5D')" (click)="playerTwoStrike ('5D')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('5E')" (click)="playerTwoStrike ('5E')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('5F')" (click)="playerTwoStrike ('5F')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('5G')" (click)="playerTwoStrike ('5G')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('5H')" (click)="playerTwoStrike ('5H')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('5I')" (click)="playerTwoStrike ('5I')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('5J')" (click)="playerTwoStrike ('5J')"></td>
-        </tr>
-        <tr>
-          <td [ngClass]="playerTwoStrikeSignal ('6A')" (click)="playerTwoStrike ('6A')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('6B')" (click)="playerTwoStrike ('6B')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('6C')" (click)="playerTwoStrike ('6C')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('6D')" (click)="playerTwoStrike ('6D')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('6E')" (click)="playerTwoStrike ('6E')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('6F')" (click)="playerTwoStrike ('6F')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('6G')" (click)="playerTwoStrike ('6G')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('6H')" (click)="playerTwoStrike ('6H')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('6I')" (click)="playerTwoStrike ('6I')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('6J')" (click)="playerTwoStrike ('6J')"></td>
-        </tr>
-        <tr>
-          <td [ngClass]="playerTwoStrikeSignal ('7A')" (click)="playerTwoStrike ('7A')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('7B')" (click)="playerTwoStrike ('7B')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('7C')" (click)="playerTwoStrike ('7C')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('7D')" (click)="playerTwoStrike ('7D')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('7E')" (click)="playerTwoStrike ('7E')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('7F')" (click)="playerTwoStrike ('7F')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('7G')" (click)="playerTwoStrike ('7G')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('7H')" (click)="playerTwoStrike ('7H')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('7I')" (click)="playerTwoStrike ('7I')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('7J')" (click)="playerTwoStrike ('7J')"></td>
-        </tr>
-        <tr>
-          <td [ngClass]="playerTwoStrikeSignal ('8A')" (click)="playerTwoStrike ('8A')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('8B')" (click)="playerTwoStrike ('8B')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('8C')" (click)="playerTwoStrike ('8C')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('8D')" (click)="playerTwoStrike ('8D')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('8E')" (click)="playerTwoStrike ('8E')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('8F')" (click)="playerTwoStrike ('8F')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('8G')" (click)="playerTwoStrike ('8G')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('8H')" (click)="playerTwoStrike ('8H')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('8I')" (click)="playerTwoStrike ('8I')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('8J')" (click)="playerTwoStrike ('8J')"></td>
-        </tr>
-        <tr>
-          <td [ngClass]="playerTwoStrikeSignal ('9A')" (click)="playerTwoStrike ('9A')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('9B')" (click)="playerTwoStrike ('9B')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('9C')" (click)="playerTwoStrike ('9C')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('9D')" (click)="playerTwoStrike ('9D')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('9E')" (click)="playerTwoStrike ('9E')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('9F')" (click)="playerTwoStrike ('9F')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('9G')" (click)="playerTwoStrike ('9G')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('9H')" (click)="playerTwoStrike ('9H')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('9I')" (click)="playerTwoStrike ('9I')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('9J')" (click)="playerTwoStrike ('9J')"></td>
-        </tr>
-        <tr>
-          <td [ngClass]="playerTwoStrikeSignal ('10A')" (click)="playerTwoStrike ('10A')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('10B')" (click)="playerTwoStrike ('10B')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('10C')" (click)="playerTwoStrike ('10C')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('10D')" (click)="playerTwoStrike ('10D')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('10E')" (click)="playerTwoStrike ('10E')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('10F')" (click)="playerTwoStrike ('10F')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('10G')" (click)="playerTwoStrike ('10G')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('10H')" (click)="playerTwoStrike ('10H')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('10I')" (click)="playerTwoStrike ('10I')"></td>
-          <td [ngClass]="playerTwoStrikeSignal ('10J')" (click)="playerTwoStrike ('10J')"></td>
-        </tr>
-      </tbody>
-    </table>
   </div>
 </div>
