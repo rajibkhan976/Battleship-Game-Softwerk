@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+.battleshipGridContainer {
+  margin: 0 auto;
+  max-width: 600px;
+  min-height: 430px;
+}
+
+.playerOne {
+  display: inline-table;
+}
+
+.player td {
+  width: 40px;
+  height: 35px;
+  border: 1px solid;
+}
+
+.player td:hover {
+  border: 2px solid blue;
+}
+
+
+#horizontalIdentifier {
+  display: inline-block;
+  max-width: 450px;
+  min-height: 20px;
+}
+
+#horizontalIdentifier span {
+  display: inline-block;
+  width: 30px;
+  height: 35px;
+  text-align: center;
+}
+
+#verticalIdentifier {
+  display: inline-block;
+  margin-top: 6%;
+  max-width: 50px;
+  min-height: 357px;
+  float: left;
+}
+
+#verticalIdentifier span {
+  display: inline-block;
+  width: 40px;
+  height: 38px;
+  text-align: center;
+}
+
+.hit {
+  background-color: green;
+}
+
+.miss {
+  background-color: red;
+}

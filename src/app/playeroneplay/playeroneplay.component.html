@@ -1,0 +1,152 @@
+<div class="col-12">
+  <div id="playerOneGrid" class="battleshipGridContainer">
+    <div id="horizontalIdentifier">
+      <span class="alphabeticIdentifier">A</span>
+      <span class="alphabeticIdentifier">B</span>
+      <span class="alphabeticIdentifier">C</span>
+      <span class="alphabeticIdentifier">D</span>
+      <span class="alphabeticIdentifier">E</span>
+      <span class="alphabeticIdentifier">F</span>
+      <span class="alphabeticIdentifier">G</span>
+      <span class="alphabeticIdentifier">H</span>
+      <span class="alphabeticIdentifier">I</span>
+      <span class="alphabeticIdentifier">J</span>
+    </div>
+    <div id="verticalIdentifier">
+      <span class="numericalIdentifier">1</span>
+      <span class="numericalIdentifier">2</span>
+      <span class="numericalIdentifier">3</span>
+      <span class="numericalIdentifier">4</span>
+      <span class="numericalIdentifier">5</span>
+      <span class="numericalIdentifier">6</span>
+      <span class="numericalIdentifier">7</span>
+      <span class="numericalIdentifier">8</span>
+      <span class="numericalIdentifier">9</span>
+      <span class="numericalIdentifier">10</span>
+    </div>
+    <table class="player" width="75%">
+      <tbody>
+        <tr>
+          <td [ngClass]="playerOneStrikeSignal ('1A')" (click)="playerOneStrike ('1A')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('1B')" (click)="playerOneStrike ('1B')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('1C')" (click)="playerOneStrike ('1C')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('1D')" (click)="playerOneStrike ('1D')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('1E')" (click)="playerOneStrike ('1E')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('1F')" (click)="playerOneStrike ('1F')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('1G')" (click)="playerOneStrike ('1G')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('1H')" (click)="playerOneStrike ('1H')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('1I')" (click)="playerOneStrike ('1I')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('1J')" (click)="playerOneStrike ('1J')"></td>
+        </tr>
+        <tr>
+          <td [ngClass]="playerOneStrikeSignal ('2A')" (click)="playerOneStrike ('2A')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('2B')" (click)="playerOneStrike ('2B')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('2C')" (click)="playerOneStrike ('2C')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('2D')" (click)="playerOneStrike ('2D')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('2E')" (click)="playerOneStrike ('2E')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('2F')" (click)="playerOneStrike ('2F')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('2G')" (click)="playerOneStrike ('2G')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('2H')" (click)="playerOneStrike ('2H')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('2I')" (click)="playerOneStrike ('2I')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('2J')" (click)="playerOneStrike ('2J')"></td>
+        </tr>
+        <tr>
+          <td [ngClass]="playerOneStrikeSignal ('3A')" (click)="playerOneStrike ('3A')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('3B')" (click)="playerOneStrike ('3B')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('3C')" (click)="playerOneStrike ('3C')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('3D')" (click)="playerOneStrike ('3D')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('3E')" (click)="playerOneStrike ('3E')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('3F')" (click)="playerOneStrike ('3F')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('3G')" (click)="playerOneStrike ('3G')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('3H')" (click)="playerOneStrike ('3H')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('3I')" (click)="playerOneStrike ('3I')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('3J')" (click)="playerOneStrike ('3J')"></td>
+        </tr>
+        <tr>
+          <td [ngClass]="playerOneStrikeSignal ('4A')" (click)="playerOneStrike ('4A')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('4B')" (click)="playerOneStrike ('4B')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('4C')" (click)="playerOneStrike ('4C')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('4D')" (click)="playerOneStrike ('4D')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('4E')" (click)="playerOneStrike ('4E')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('4F')" (click)="playerOneStrike ('4F')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('4G')" (click)="playerOneStrike ('4G')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('4H')" (click)="playerOneStrike ('4H')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('4I')" (click)="playerOneStrike ('4I')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('4J')" (click)="playerOneStrike ('4J')"></td>
+        </tr>
+        <tr>
+          <td [ngClass]="playerOneStrikeSignal ('5A')" (click)="playerOneStrike ('5A')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('5B')" (click)="playerOneStrike ('5B')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('5C')" (click)="playerOneStrike ('5C')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('5D')" (click)="playerOneStrike ('5D')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('5E')" (click)="playerOneStrike ('5E')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('5F')" (click)="playerOneStrike ('5F')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('5G')" (click)="playerOneStrike ('5G')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('5H')" (click)="playerOneStrike ('5H')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('5I')" (click)="playerOneStrike ('5I')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('5J')" (click)="playerOneStrike ('5J')"></td>
+        </tr>
+        <tr>
+          <td [ngClass]="playerOneStrikeSignal ('6A')" (click)="playerOneStrike ('6A')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('6B')" (click)="playerOneStrike ('6B')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('6C')" (click)="playerOneStrike ('6C')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('6D')" (click)="playerOneStrike ('6D')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('6E')" (click)="playerOneStrike ('6E')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('6F')" (click)="playerOneStrike ('6F')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('6G')" (click)="playerOneStrike ('6G')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('6H')" (click)="playerOneStrike ('6H')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('6I')" (click)="playerOneStrike ('6I')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('6J')" (click)="playerOneStrike ('6J')"></td>
+        </tr>
+        <tr>
+          <td [ngClass]="playerOneStrikeSignal ('7A')" (click)="playerOneStrike ('7A')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('7B')" (click)="playerOneStrike ('7B')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('7C')" (click)="playerOneStrike ('7C')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('7D')" (click)="playerOneStrike ('7D')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('7E')" (click)="playerOneStrike ('7E')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('7F')" (click)="playerOneStrike ('7F')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('7G')" (click)="playerOneStrike ('7G')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('7H')" (click)="playerOneStrike ('7H')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('7I')" (click)="playerOneStrike ('7I')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('7J')" (click)="playerOneStrike ('7J')"></td>
+        </tr>
+        <tr>
+          <td [ngClass]="playerOneStrikeSignal ('8A')" (click)="playerOneStrike ('8A')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('8B')" (click)="playerOneStrike ('8B')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('8C')" (click)="playerOneStrike ('8C')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('8D')" (click)="playerOneStrike ('8D')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('8E')" (click)="playerOneStrike ('8E')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('8F')" (click)="playerOneStrike ('8F')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('8G')" (click)="playerOneStrike ('8G')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('8H')" (click)="playerOneStrike ('8H')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('8I')" (click)="playerOneStrike ('8I')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('8J')" (click)="playerOneStrike ('8J')"></td>
+        </tr>
+        <tr>
+          <td [ngClass]="playerOneStrikeSignal ('9A')" (click)="playerOneStrike ('9A')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('9B')" (click)="playerOneStrike ('9B')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('9C')" (click)="playerOneStrike ('9C')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('9D')" (click)="playerOneStrike ('9D')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('9E')" (click)="playerOneStrike ('9E')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('9F')" (click)="playerOneStrike ('9F')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('9G')" (click)="playerOneStrike ('9G')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('9H')" (click)="playerOneStrike ('9H')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('9I')" (click)="playerOneStrike ('9I')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('9J')" (click)="playerOneStrike ('9J')"></td>
+        </tr>
+        <tr>
+          <td [ngClass]="playerOneStrikeSignal ('10A')" (click)="playerOneStrike ('10A')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('10B')" (click)="playerOneStrike ('10B')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('10C')" (click)="playerOneStrike ('10C')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('10D')" (click)="playerOneStrike ('10D')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('10E')" (click)="playerOneStrike ('10E')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('10F')" (click)="playerOneStrike ('10F')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('10G')" (click)="playerOneStrike ('10G')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('10H')" (click)="playerOneStrike ('10H')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('10I')" (click)="playerOneStrike ('10I')"></td>
+          <td [ngClass]="playerOneStrikeSignal ('10J')" (click)="playerOneStrike ('10J')"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
