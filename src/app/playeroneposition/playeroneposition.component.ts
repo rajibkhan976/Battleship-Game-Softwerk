@@ -19,11 +19,14 @@ export class PlayeronepositionComponent implements OnInit {
   typeOfBattleShip: string;
   sizeOfBattleShip: number;
   instructionOne: string;
+  toggleGrid: string = 'playerOnePositionGrid';
   playerOneCarrierPosition: string[] = [];
   playerOneFrigatePosition: string[] = [];
   playerOneCruiserPosition: string[] = [];
   playerOneSubmarinePosition: string[] = [];
   playerOneDestroyerPosition: string[] = [];
+  @Input() gridTogglar: number;
+  @Output() incrementGridTogglar = new EventEmitter<number>();
 
   constructor(private route: ActivatedRoute, private router: Router) { }
 
@@ -36,49 +39,62 @@ export class PlayeronepositionComponent implements OnInit {
     }
   }
 
+  onClickIncrement () {
+    this.incrementGridTogglar.emit();
+  }
+
   positionShip (cellValue: string) {
-    if (this.typeOfBattleShip === 'Carrier') {
-      for (var carrierPositionCounter = 0; carrierPositionCounter < 1; carrierPositionCounter++) {
-        if (this.playerOneCarrierPosition.length < 5 && !this.playerOneCarrierPosition.includes(cellValue)) {
-          this.playerOneCarrierPosition.push(cellValue);
-        } else {
-          break;
+    if (this.gridTogglar === 17) {
+      this.toggleGrid = 'playerTwoStrikeGrid';
+    } else {
+      if (this.typeOfBattleShip === 'Carrier') {
+        for (var carrierPositionCounter = 0; carrierPositionCounter < 1; carrierPositionCounter++) {
+          if (this.playerOneCarrierPosition.length < 5 && this.gridTogglar < 17 && !this.playerOneCarrierPosition.includes(cellValue)) {
+            this.onClickIncrement ();
+            this.playerOneCarrierPosition.push(cellValue);
+          } else {
+            break;
+          }
         }
       }
-    }
-    if (this.typeOfBattleShip === 'Frigate') {
-      for (var frigatePositionCounter = 0; frigatePositionCounter < 1; frigatePositionCounter++) {
-        if (this.playerOneFrigatePosition.length < 4 && !this.playerOneFrigatePosition.includes(cellValue)) {
-          this.playerOneFrigatePosition.push(cellValue);
-        } else {
-          break;
+      if (this.typeOfBattleShip === 'Frigate') {
+        for (var frigatePositionCounter = 0; frigatePositionCounter < 1; frigatePositionCounter++) {
+          if (this.playerOneFrigatePosition.length < 4 && this.gridTogglar < 17 && !this.playerOneFrigatePosition.includes(cellValue)) {
+            this.onClickIncrement ();
+            this.playerOneFrigatePosition.push(cellValue);
+          } else {
+            break;
+          }
         }
       }
-    }
-    if (this.typeOfBattleShip === 'Cruiser') {
-      for (var cruiserPositionCounter = 0; cruiserPositionCounter < 1; cruiserPositionCounter++) {
-        if (this.playerOneCruiserPosition.length < 3 && !this.playerOneCruiserPosition.includes(cellValue)) {
-          this.playerOneCruiserPosition.push(cellValue);
-        } else {
-          break;
+      if (this.typeOfBattleShip === 'Cruiser') {
+        for (var cruiserPositionCounter = 0; cruiserPositionCounter < 1; cruiserPositionCounter++) {
+          if (this.playerOneCruiserPosition.length < 3 && this.gridTogglar < 17 && !this.playerOneCruiserPosition.includes(cellValue)) {
+            this.onClickIncrement ();
+            this.playerOneCruiserPosition.push(cellValue);
+          } else {
+            break;
+          }
         }
       }
-    }
-    if (this.typeOfBattleShip === 'Submarine') {
-      for (var submarinePositionCounter = 0; submarinePositionCounter < 1; submarinePositionCounter++) {
-        if (this.playerOneSubmarinePosition.length < 3 && !this.playerOneSubmarinePosition.includes(cellValue)) {
-          this.playerOneSubmarinePosition.push(cellValue);
-        } else {
-          break;
+      if (this.typeOfBattleShip === 'Submarine') {
+        for (var submarinePositionCounter = 0; submarinePositionCounter < 1; submarinePositionCounter++) {
+          if (this.playerOneSubmarinePosition.length < 3 && this.gridTogglar < 17 && !this.playerOneSubmarinePosition.includes(cellValue)) {
+            this.onClickIncrement ();
+            this.playerOneSubmarinePosition.push(cellValue);
+          } else {
+            break;
+          }
         }
       }
-    }
-    if (this.typeOfBattleShip === 'Destroyer') {
-      for (var destroyerPositionCounter = 0; destroyerPositionCounter < 1; destroyerPositionCounter++) {
-        if (this.playerOneDestroyerPosition.length < 2 && !this.playerOneDestroyerPosition.includes(cellValue)) {
-          this.playerOneDestroyerPosition.push(cellValue);
-        } else {
-          break;
+      if (this.typeOfBattleShip === 'Destroyer') {
+        for (var destroyerPositionCounter = 0; destroyerPositionCounter < 1; destroyerPositionCounter++) {
+          if (this.playerOneDestroyerPosition.length < 2 && this.gridTogglar < 17 && !this.playerOneDestroyerPosition.includes(cellValue)) {
+            this.onClickIncrement ();
+            this.playerOneDestroyerPosition.push(cellValue);
+          } else {
+            break;
+          }
         }
       }
     }

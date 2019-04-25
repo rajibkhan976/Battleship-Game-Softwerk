@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
+  playerOneGridController: number = 0;
+
   constructor() { }
+
+  incrementfirstPlayerGridController () {
+    this.playerOneGridController++;
+  }
 
   ngOnInit() {
   }

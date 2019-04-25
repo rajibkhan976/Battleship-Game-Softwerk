@@ -1,4 +1,5 @@
-<div class="container">
+<div class="container" [ngSwitch]="toggleGrid">
+  <div class="" *ngSwitchCase="'playerTwoStrikeGrid'">
     <app-playertwoplay
     [firstPlayerCarrierPosition]="playerOneCarrierPosition"
     [firstPlayerFrigatePosition]="playerOneFrigatePosition"
@@ -6,176 +7,179 @@
     [firstPlayerSubmarinePosition]="playerOneSubmarinePosition"
     [firstPlayerDestroyerPosition]="playerOneDestroyerPosition">
     </app-playertwoplay>
-  <div class="row">
-    <div class="col-12">
-      <h2 class="text-success">{{playerOne}}</h2>
-      <div class="battleShipOptions">
-        <h3>Select battleship</h3>
-        <input [(ngModel)]="typeOfBattleShip" type="radio" id="Carrier" name="Carrier" value="Carrier" (change)="getShipType ()">
-        <label for="Carrier">&nbsp;Carrier&nbsp;</label><span class="badge badge-secondary">5</span><br/>
-        <input [(ngModel)]="typeOfBattleShip" type="radio" id="Frigate" name="Frigate" value="Frigate" (change)="getShipType ()">
-        <label for="Frigate">&nbsp;Frigate&nbsp;</label><span class="badge badge-info">4</span><br/>
-        <input [(ngModel)]="typeOfBattleShip" type="radio" id="Cruiser" name="Cruiser" value="Cruiser" (change)="getShipType ()">
-        <label for="Cruiser">&nbsp;Cruiser&nbsp;</label><span class="badge badge-primary">3</span><br/>
-        <input [(ngModel)]="typeOfBattleShip" type="radio" id="Submarine" name="Submarine" value="Submarine" (change)="getShipType ()">
-        <label for="Submarine">&nbsp;Submarine&nbsp;</label><span class="badge badge-dark">3</span><br/>
-        <input [(ngModel)]="typeOfBattleShip" type="radio" id="Destroyer" name="Destroyer" value="Destroyer" (change)="getShipType ()">
-        <label for="Destroyer">&nbsp;Destroyer&nbsp;</label><span class="badge badge-warning">2</span>
-      </div>
-      <h4>{{instructionOne}}</h4>
-    </div>
   </div>
-  <div class="row">
-    <div class="col-12">
-      <div class="battleshipGridContainer">
-        <div id="horizontalIdentifier">
-          <span class="alphabeticIdentifier">A</span>
-          <span class="alphabeticIdentifier">B</span>
-          <span class="alphabeticIdentifier">C</span>
-          <span class="alphabeticIdentifier">D</span>
-          <span class="alphabeticIdentifier">E</span>
-          <span class="alphabeticIdentifier">F</span>
-          <span class="alphabeticIdentifier">G</span>
-          <span class="alphabeticIdentifier">H</span>
-          <span class="alphabeticIdentifier">I</span>
-          <span class="alphabeticIdentifier">J</span>
+  <div class="" *ngSwitchCase="'playerOnePositionGrid'">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="text-success">{{playerOne}}</h2>
+        <div class="battleShipOptions">
+          <h3>Select battleship</h3>
+          <input [(ngModel)]="typeOfBattleShip" type="radio" id="Carrier" name="Carrier" value="Carrier" (change)="getShipType ()">
+          <label for="Carrier">&nbsp;Carrier&nbsp;</label><span class="badge badge-secondary">5</span><br/>
+          <input [(ngModel)]="typeOfBattleShip" type="radio" id="Frigate" name="Frigate" value="Frigate" (change)="getShipType ()">
+          <label for="Frigate">&nbsp;Frigate&nbsp;</label><span class="badge badge-info">4</span><br/>
+          <input [(ngModel)]="typeOfBattleShip" type="radio" id="Cruiser" name="Cruiser" value="Cruiser" (change)="getShipType ()">
+          <label for="Cruiser">&nbsp;Cruiser&nbsp;</label><span class="badge badge-primary">3</span><br/>
+          <input [(ngModel)]="typeOfBattleShip" type="radio" id="Submarine" name="Submarine" value="Submarine" (change)="getShipType ()">
+          <label for="Submarine">&nbsp;Submarine&nbsp;</label><span class="badge badge-dark">3</span><br/>
+          <input [(ngModel)]="typeOfBattleShip" type="radio" id="Destroyer" name="Destroyer" value="Destroyer" (change)="getShipType ()">
+          <label for="Destroyer">&nbsp;Destroyer&nbsp;</label><span class="badge badge-warning">2</span>
         </div>
-        <div id="verticalIdentifier">
-          <span class="numericalIdentifier">1</span>
-          <span class="numericalIdentifier">2</span>
-          <span class="numericalIdentifier">3</span>
-          <span class="numericalIdentifier">4</span>
-          <span class="numericalIdentifier">5</span>
-          <span class="numericalIdentifier">6</span>
-          <span class="numericalIdentifier">7</span>
-          <span class="numericalIdentifier">8</span>
-          <span class="numericalIdentifier">9</span>
-          <span class="numericalIdentifier">10</span>
+        <h4>{{instructionOne}}</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="battleshipGridContainer">
+          <div id="horizontalIdentifier">
+            <span class="alphabeticIdentifier">A</span>
+            <span class="alphabeticIdentifier">B</span>
+            <span class="alphabeticIdentifier">C</span>
+            <span class="alphabeticIdentifier">D</span>
+            <span class="alphabeticIdentifier">E</span>
+            <span class="alphabeticIdentifier">F</span>
+            <span class="alphabeticIdentifier">G</span>
+            <span class="alphabeticIdentifier">H</span>
+            <span class="alphabeticIdentifier">I</span>
+            <span class="alphabeticIdentifier">J</span>
+          </div>
+          <div id="verticalIdentifier">
+            <span class="numericalIdentifier">1</span>
+            <span class="numericalIdentifier">2</span>
+            <span class="numericalIdentifier">3</span>
+            <span class="numericalIdentifier">4</span>
+            <span class="numericalIdentifier">5</span>
+            <span class="numericalIdentifier">6</span>
+            <span class="numericalIdentifier">7</span>
+            <span class="numericalIdentifier">8</span>
+            <span class="numericalIdentifier">9</span>
+            <span class="numericalIdentifier">10</span>
+          </div>
+          <table class="playerOne" width="75%">
+            <tbody>
+              <tr>
+                <td [ngClass]="setClass ('1A')" (click)="positionShip ('1A')"></td>
+                <td [ngClass]="setClass ('1B')" (click)="positionShip ('1B')"></td>
+                <td [ngClass]="setClass ('1C')" (click)="positionShip ('1C')"></td>
+                <td [ngClass]="setClass ('1D')" (click)="positionShip ('1D')"></td>
+                <td [ngClass]="setClass ('1E')" (click)="positionShip ('1E')"></td>
+                <td [ngClass]="setClass ('1F')" (click)="positionShip ('1F')"></td>
+                <td [ngClass]="setClass ('1G')" (click)="positionShip ('1G')"></td>
+                <td [ngClass]="setClass ('1H')" (click)="positionShip ('1H')"></td>
+                <td [ngClass]="setClass ('1I')" (click)="positionShip ('1I')"></td>
+                <td [ngClass]="setClass ('1J')" (click)="positionShip ('1J')"></td>
+              </tr>
+              <tr>
+                <td [ngClass]="setClass ('2A')" (click)="positionShip ('2A')"></td>
+                <td [ngClass]="setClass ('2B')" (click)="positionShip ('2B')"></td>
+                <td [ngClass]="setClass ('2C')" (click)="positionShip ('2C')"></td>
+                <td [ngClass]="setClass ('2D')" (click)="positionShip ('2D')"></td>
+                <td [ngClass]="setClass ('2E')" (click)="positionShip ('2E')"></td>
+                <td [ngClass]="setClass ('2F')" (click)="positionShip ('2F')"></td>
+                <td [ngClass]="setClass ('2G')" (click)="positionShip ('2G')"></td>
+                <td [ngClass]="setClass ('2H')" (click)="positionShip ('2H')"></td>
+                <td [ngClass]="setClass ('2I')" (click)="positionShip ('2I')"></td>
+                <td [ngClass]="setClass ('2J')" (click)="positionShip ('2J')"></td>
+              </tr>
+              <tr>
+                <td [ngClass]="setClass ('3A')" (click)="positionShip ('3A')"></td>
+                <td [ngClass]="setClass ('3B')" (click)="positionShip ('3B')"></td>
+                <td [ngClass]="setClass ('3C')" (click)="positionShip ('3C')"></td>
+                <td [ngClass]="setClass ('3D')" (click)="positionShip ('3D')"></td>
+                <td [ngClass]="setClass ('3E')" (click)="positionShip ('3E')"></td>
+                <td [ngClass]="setClass ('3F')" (click)="positionShip ('3F')"></td>
+                <td [ngClass]="setClass ('3G')" (click)="positionShip ('3G')"></td>
+                <td [ngClass]="setClass ('3H')" (click)="positionShip ('3H')"></td>
+                <td [ngClass]="setClass ('3I')" (click)="positionShip ('3I')"></td>
+                <td [ngClass]="setClass ('3J')" (click)="positionShip ('3J')"></td>
+              </tr>
+              <tr>
+                <td [ngClass]="setClass ('4A')" (click)="positionShip ('4A')"></td>
+                <td [ngClass]="setClass ('4B')" (click)="positionShip ('4B')"></td>
+                <td [ngClass]="setClass ('4C')" (click)="positionShip ('4C')"></td>
+                <td [ngClass]="setClass ('4D')" (click)="positionShip ('4D')"></td>
+                <td [ngClass]="setClass ('4E')" (click)="positionShip ('4E')"></td>
+                <td [ngClass]="setClass ('4F')" (click)="positionShip ('4F')"></td>
+                <td [ngClass]="setClass ('4G')" (click)="positionShip ('4G')"></td>
+                <td [ngClass]="setClass ('4H')" (click)="positionShip ('4H')"></td>
+                <td [ngClass]="setClass ('4I')" (click)="positionShip ('4I')"></td>
+                <td [ngClass]="setClass ('4J')" (click)="positionShip ('4J')"></td>
+              </tr>
+              <tr>
+                <td [ngClass]="setClass ('5A')" (click)="positionShip ('5A')"></td>
+                <td [ngClass]="setClass ('5B')" (click)="positionShip ('5B')"></td>
+                <td [ngClass]="setClass ('5C')" (click)="positionShip ('5C')"></td>
+                <td [ngClass]="setClass ('5D')" (click)="positionShip ('5D')"></td>
+                <td [ngClass]="setClass ('5E')" (click)="positionShip ('5E')"></td>
+                <td [ngClass]="setClass ('5F')" (click)="positionShip ('5F')"></td>
+                <td [ngClass]="setClass ('5G')" (click)="positionShip ('5G')"></td>
+                <td [ngClass]="setClass ('5H')" (click)="positionShip ('5H')"></td>
+                <td [ngClass]="setClass ('5I')" (click)="positionShip ('5I')"></td>
+                <td [ngClass]="setClass ('5J')" (click)="positionShip ('5J')"></td>
+              </tr>
+              <tr>
+                <td [ngClass]="setClass ('6A')" (click)="positionShip ('6A')"></td>
+                <td [ngClass]="setClass ('6B')" (click)="positionShip ('6B')"></td>
+                <td [ngClass]="setClass ('6C')" (click)="positionShip ('6C')"></td>
+                <td [ngClass]="setClass ('6D')" (click)="positionShip ('6D')"></td>
+                <td [ngClass]="setClass ('6E')" (click)="positionShip ('6E')"></td>
+                <td [ngClass]="setClass ('6F')" (click)="positionShip ('6F')"></td>
+                <td [ngClass]="setClass ('6G')" (click)="positionShip ('6G')"></td>
+                <td [ngClass]="setClass ('6H')" (click)="positionShip ('6H')"></td>
+                <td [ngClass]="setClass ('6I')" (click)="positionShip ('6I')"></td>
+                <td [ngClass]="setClass ('6J')" (click)="positionShip ('6J')"></td>
+              </tr>
+              <tr>
+                <td [ngClass]="setClass ('7A')" (click)="positionShip ('7A')"></td>
+                <td [ngClass]="setClass ('7B')" (click)="positionShip ('7B')"></td>
+                <td [ngClass]="setClass ('7C')" (click)="positionShip ('7C')"></td>
+                <td [ngClass]="setClass ('7D')" (click)="positionShip ('7D')"></td>
+                <td [ngClass]="setClass ('7E')" (click)="positionShip ('7E')"></td>
+                <td [ngClass]="setClass ('7F')" (click)="positionShip ('7F')"></td>
+                <td [ngClass]="setClass ('7G')" (click)="positionShip ('7G')"></td>
+                <td [ngClass]="setClass ('7H')" (click)="positionShip ('7H')"></td>
+                <td [ngClass]="setClass ('7I')" (click)="positionShip ('7I')"></td>
+                <td [ngClass]="setClass ('7J')" (click)="positionShip ('7J')"></td>
+              </tr>
+              <tr>
+                <td [ngClass]="setClass ('8A')" (click)="positionShip ('8A')"></td>
+                <td [ngClass]="setClass ('8B')" (click)="positionShip ('8B')"></td>
+                <td [ngClass]="setClass ('8C')" (click)="positionShip ('8C')"></td>
+                <td [ngClass]="setClass ('8D')" (click)="positionShip ('8D')"></td>
+                <td [ngClass]="setClass ('8E')" (click)="positionShip ('8E')"></td>
+                <td [ngClass]="setClass ('8F')" (click)="positionShip ('8F')"></td>
+                <td [ngClass]="setClass ('8G')" (click)="positionShip ('8G')"></td>
+                <td [ngClass]="setClass ('8H')" (click)="positionShip ('8H')"></td>
+                <td [ngClass]="setClass ('8I')" (click)="positionShip ('8I')"></td>
+                <td [ngClass]="setClass ('8J')" (click)="positionShip ('8J')"></td>
+              </tr>
+              <tr>
+                <td [ngClass]="setClass ('9A')" (click)="positionShip ('9A')"></td>
+                <td [ngClass]="setClass ('9B')" (click)="positionShip ('9B')"></td>
+                <td [ngClass]="setClass ('9C')" (click)="positionShip ('9C')"></td>
+                <td [ngClass]="setClass ('9D')" (click)="positionShip ('9D')"></td>
+                <td [ngClass]="setClass ('9E')" (click)="positionShip ('9E')"></td>
+                <td [ngClass]="setClass ('9F')" (click)="positionShip ('9F')"></td>
+                <td [ngClass]="setClass ('9G')" (click)="positionShip ('9G')"></td>
+                <td [ngClass]="setClass ('9H')" (click)="positionShip ('9H')"></td>
+                <td [ngClass]="setClass ('9I')" (click)="positionShip ('9I')"></td>
+                <td [ngClass]="setClass ('9J')" (click)="positionShip ('9J')"></td>
+              </tr>
+              <tr>
+                <td [ngClass]="setClass ('10A')" (click)="positionShip ('10A')"></td>
+                <td [ngClass]="setClass ('10B')" (click)="positionShip ('10B')"></td>
+                <td [ngClass]="setClass ('10C')" (click)="positionShip ('10C')"></td>
+                <td [ngClass]="setClass ('10D')" (click)="positionShip ('10D')"></td>
+                <td [ngClass]="setClass ('10E')" (click)="positionShip ('10E')"></td>
+                <td [ngClass]="setClass ('10F')" (click)="positionShip ('10F')"></td>
+                <td [ngClass]="setClass ('10G')" (click)="positionShip ('10G')"></td>
+                <td [ngClass]="setClass ('10H')" (click)="positionShip ('10H')"></td>
+                <td [ngClass]="setClass ('10I')" (click)="positionShip ('10I')"></td>
+                <td [ngClass]="setClass ('10J')" (click)="positionShip ('10J')"></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <table class="playerOne" width="75%">
-          <tbody>
-            <tr>
-              <td [ngClass]="setClass ('1A')" (click)="positionShip ('1A')"></td>
-              <td [ngClass]="setClass ('1B')" (click)="positionShip ('1B')"></td>
-              <td [ngClass]="setClass ('1C')" (click)="positionShip ('1C')"></td>
-              <td [ngClass]="setClass ('1D')" (click)="positionShip ('1D')"></td>
-              <td [ngClass]="setClass ('1E')" (click)="positionShip ('1E')"></td>
-              <td [ngClass]="setClass ('1F')" (click)="positionShip ('1F')"></td>
-              <td [ngClass]="setClass ('1G')" (click)="positionShip ('1G')"></td>
-              <td [ngClass]="setClass ('1H')" (click)="positionShip ('1H')"></td>
-              <td [ngClass]="setClass ('1I')" (click)="positionShip ('1I')"></td>
-              <td [ngClass]="setClass ('1J')" (click)="positionShip ('1J')"></td>
-            </tr>
-            <tr>
-              <td [ngClass]="setClass ('2A')" (click)="positionShip ('2A')"></td>
-              <td [ngClass]="setClass ('2B')" (click)="positionShip ('2B')"></td>
-              <td [ngClass]="setClass ('2C')" (click)="positionShip ('2C')"></td>
-              <td [ngClass]="setClass ('2D')" (click)="positionShip ('2D')"></td>
-              <td [ngClass]="setClass ('2E')" (click)="positionShip ('2E')"></td>
-              <td [ngClass]="setClass ('2F')" (click)="positionShip ('2F')"></td>
-              <td [ngClass]="setClass ('2G')" (click)="positionShip ('2G')"></td>
-              <td [ngClass]="setClass ('2H')" (click)="positionShip ('2H')"></td>
-              <td [ngClass]="setClass ('2I')" (click)="positionShip ('2I')"></td>
-              <td [ngClass]="setClass ('2J')" (click)="positionShip ('2J')"></td>
-            </tr>
-            <tr>
-              <td [ngClass]="setClass ('3A')" (click)="positionShip ('3A')"></td>
-              <td [ngClass]="setClass ('3B')" (click)="positionShip ('3B')"></td>
-              <td [ngClass]="setClass ('3C')" (click)="positionShip ('3C')"></td>
-              <td [ngClass]="setClass ('3D')" (click)="positionShip ('3D')"></td>
-              <td [ngClass]="setClass ('3E')" (click)="positionShip ('3E')"></td>
-              <td [ngClass]="setClass ('3F')" (click)="positionShip ('3F')"></td>
-              <td [ngClass]="setClass ('3G')" (click)="positionShip ('3G')"></td>
-              <td [ngClass]="setClass ('3H')" (click)="positionShip ('3H')"></td>
-              <td [ngClass]="setClass ('3I')" (click)="positionShip ('3I')"></td>
-              <td [ngClass]="setClass ('3J')" (click)="positionShip ('3J')"></td>
-            </tr>
-            <tr>
-              <td [ngClass]="setClass ('4A')" (click)="positionShip ('4A')"></td>
-              <td [ngClass]="setClass ('4B')" (click)="positionShip ('4B')"></td>
-              <td [ngClass]="setClass ('4C')" (click)="positionShip ('4C')"></td>
-              <td [ngClass]="setClass ('4D')" (click)="positionShip ('4D')"></td>
-              <td [ngClass]="setClass ('4E')" (click)="positionShip ('4E')"></td>
-              <td [ngClass]="setClass ('4F')" (click)="positionShip ('4F')"></td>
-              <td [ngClass]="setClass ('4G')" (click)="positionShip ('4G')"></td>
-              <td [ngClass]="setClass ('4H')" (click)="positionShip ('4H')"></td>
-              <td [ngClass]="setClass ('4I')" (click)="positionShip ('4I')"></td>
-              <td [ngClass]="setClass ('4J')" (click)="positionShip ('4J')"></td>
-            </tr>
-            <tr>
-              <td [ngClass]="setClass ('5A')" (click)="positionShip ('5A')"></td>
-              <td [ngClass]="setClass ('5B')" (click)="positionShip ('5B')"></td>
-              <td [ngClass]="setClass ('5C')" (click)="positionShip ('5C')"></td>
-              <td [ngClass]="setClass ('5D')" (click)="positionShip ('5D')"></td>
-              <td [ngClass]="setClass ('5E')" (click)="positionShip ('5E')"></td>
-              <td [ngClass]="setClass ('5F')" (click)="positionShip ('5F')"></td>
-              <td [ngClass]="setClass ('5G')" (click)="positionShip ('5G')"></td>
-              <td [ngClass]="setClass ('5H')" (click)="positionShip ('5H')"></td>
-              <td [ngClass]="setClass ('5I')" (click)="positionShip ('5I')"></td>
-              <td [ngClass]="setClass ('5J')" (click)="positionShip ('5J')"></td>
-            </tr>
-            <tr>
-              <td [ngClass]="setClass ('6A')" (click)="positionShip ('6A')"></td>
-              <td [ngClass]="setClass ('6B')" (click)="positionShip ('6B')"></td>
-              <td [ngClass]="setClass ('6C')" (click)="positionShip ('6C')"></td>
-              <td [ngClass]="setClass ('6D')" (click)="positionShip ('6D')"></td>
-              <td [ngClass]="setClass ('6E')" (click)="positionShip ('6E')"></td>
-              <td [ngClass]="setClass ('6F')" (click)="positionShip ('6F')"></td>
-              <td [ngClass]="setClass ('6G')" (click)="positionShip ('6G')"></td>
-              <td [ngClass]="setClass ('6H')" (click)="positionShip ('6H')"></td>
-              <td [ngClass]="setClass ('6I')" (click)="positionShip ('6I')"></td>
-              <td [ngClass]="setClass ('6J')" (click)="positionShip ('6J')"></td>
-            </tr>
-            <tr>
-              <td [ngClass]="setClass ('7A')" (click)="positionShip ('7A')"></td>
-              <td [ngClass]="setClass ('7B')" (click)="positionShip ('7B')"></td>
-              <td [ngClass]="setClass ('7C')" (click)="positionShip ('7C')"></td>
-              <td [ngClass]="setClass ('7D')" (click)="positionShip ('7D')"></td>
-              <td [ngClass]="setClass ('7E')" (click)="positionShip ('7E')"></td>
-              <td [ngClass]="setClass ('7F')" (click)="positionShip ('7F')"></td>
-              <td [ngClass]="setClass ('7G')" (click)="positionShip ('7G')"></td>
-              <td [ngClass]="setClass ('7H')" (click)="positionShip ('7H')"></td>
-              <td [ngClass]="setClass ('7I')" (click)="positionShip ('7I')"></td>
-              <td [ngClass]="setClass ('7J')" (click)="positionShip ('7J')"></td>
-            </tr>
-            <tr>
-              <td [ngClass]="setClass ('8A')" (click)="positionShip ('8A')"></td>
-              <td [ngClass]="setClass ('8B')" (click)="positionShip ('8B')"></td>
-              <td [ngClass]="setClass ('8C')" (click)="positionShip ('8C')"></td>
-              <td [ngClass]="setClass ('8D')" (click)="positionShip ('8D')"></td>
-              <td [ngClass]="setClass ('8E')" (click)="positionShip ('8E')"></td>
-              <td [ngClass]="setClass ('8F')" (click)="positionShip ('8F')"></td>
-              <td [ngClass]="setClass ('8G')" (click)="positionShip ('8G')"></td>
-              <td [ngClass]="setClass ('8H')" (click)="positionShip ('8H')"></td>
-              <td [ngClass]="setClass ('8I')" (click)="positionShip ('8I')"></td>
-              <td [ngClass]="setClass ('8J')" (click)="positionShip ('8J')"></td>
-            </tr>
-            <tr>
-              <td [ngClass]="setClass ('9A')" (click)="positionShip ('9A')"></td>
-              <td [ngClass]="setClass ('9B')" (click)="positionShip ('9B')"></td>
-              <td [ngClass]="setClass ('9C')" (click)="positionShip ('9C')"></td>
-              <td [ngClass]="setClass ('9D')" (click)="positionShip ('9D')"></td>
-              <td [ngClass]="setClass ('9E')" (click)="positionShip ('9E')"></td>
-              <td [ngClass]="setClass ('9F')" (click)="positionShip ('9F')"></td>
-              <td [ngClass]="setClass ('9G')" (click)="positionShip ('9G')"></td>
-              <td [ngClass]="setClass ('9H')" (click)="positionShip ('9H')"></td>
-              <td [ngClass]="setClass ('9I')" (click)="positionShip ('9I')"></td>
-              <td [ngClass]="setClass ('9J')" (click)="positionShip ('9J')"></td>
-            </tr>
-            <tr>
-              <td [ngClass]="setClass ('10A')" (click)="positionShip ('10A')"></td>
-              <td [ngClass]="setClass ('10B')" (click)="positionShip ('10B')"></td>
-              <td [ngClass]="setClass ('10C')" (click)="positionShip ('10C')"></td>
-              <td [ngClass]="setClass ('10D')" (click)="positionShip ('10D')"></td>
-              <td [ngClass]="setClass ('10E')" (click)="positionShip ('10E')"></td>
-              <td [ngClass]="setClass ('10F')" (click)="positionShip ('10F')"></td>
-              <td [ngClass]="setClass ('10G')" (click)="positionShip ('10G')"></td>
-              <td [ngClass]="setClass ('10H')" (click)="positionShip ('10H')"></td>
-              <td [ngClass]="setClass ('10I')" (click)="positionShip ('10I')"></td>
-              <td [ngClass]="setClass ('10J')" (click)="positionShip ('10J')"></td>
-            </tr>
-          </tbody>
-        </table>
       </div>
     </div>
   </div>
