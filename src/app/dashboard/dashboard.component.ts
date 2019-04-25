@@ -8,11 +8,16 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class DashboardComponent implements OnInit {
 
   playerOneGridController: number = 0;
+  playerTwoGridController: number = 0;
 
   constructor() { }
 
   incrementfirstPlayerGridController () {
     this.playerOneGridController++;
+  }
+
+  incrementSecondPlayerGridController () {
+    this.playerTwoGridController++;
   }
 
   ngOnInit() {
