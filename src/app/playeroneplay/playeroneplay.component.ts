@@ -7,34 +7,46 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class PlayeroneplayComponent implements OnInit {
 
-  secondPlayerCarrierPosition: string[] = localStorage.getItem('playerTwoCarrierPosition');
-  secondPlayerFrigatePosition: string[] = localStorage.getItem('playerTwoFrigatePosition');
-  secondPlayerCruiserPosition: string[] = localStorage.getItem('playerTwoCruiserPosition');
-  secondPlayerSubmarinePosition: string[] = localStorage.getItem('playerTwoSubmarinePosition');
-  secondPlayerDestroyerPosition: string[] = localStorage.getItem('playerTwoDestroyerPosition');
-  @Input() playerOneStrikeGridController: string;
+  secondPlayerCarrierPosition: any = localStorage.getItem('playerTwoCarrierPosition');
+  secondPlayerFrigatePosition: any = localStorage.getItem('playerTwoFrigatePosition');
+  secondPlayerCruiserPosition: any = localStorage.getItem('playerTwoCruiserPosition');
+  secondPlayerSubmarinePosition: any = localStorage.getItem('playerTwoSubmarinePosition');
+  secondPlayerDestroyerPosition: any = localStorage.getItem('playerTwoDestroyerPosition');
 
   firstPlayerHit: string[] = [];
   firstPlayerMiss: string[] = [];
+
   playerOne: string = 'Player one strike grid';
+
+  @Input() playerOneStrikeGridController: string;
 
   constructor() { }
 
   playerOneStrike (firstPlayerStrike: string) {
-    if (this.secondPlayerCarrierPosition.includes(firstPlayerStrike)) {
-      this.firstPlayerHit.push(firstPlayerStrike);
-    } else if (this.secondPlayerFrigatePosition.includes(firstPlayerStrike)) {
-      this.firstPlayerHit.push(firstPlayerStrike);
-    } else if (this.secondPlayerCruiserPosition.includes(firstPlayerStrike)) {
-      this.firstPlayerHit.push(firstPlayerStrike);
-    } else if (this.secondPlayerSubmarinePosition.includes(firstPlayerStrike)) {
-      this.firstPlayerHit.push(firstPlayerStrike);
-    } else if (this.secondPlayerDestroyerPosition.includes(firstPlayerStrike)) {
-      this.firstPlayerHit.push(firstPlayerStrike);
-    } else {
-      this.firstPlayerMiss.push(firstPlayerStrike);
+    if (localStorage.getItem('playerTwoStrike') === 'failure') {
+      if (JSON.parse(this.secondPlayerCarrierPosition).includes(firstPlayerStrike)) {
+        this.firstPlayerHit.push(firstPlayerStrike);
+        localStorage.setItem('playerOneStrike', 'success');
+      } else if (JSON.parse(this.secondPlayerFrigatePosition).includes(firstPlayerStrike)) {
+        this.firstPlayerHit.push(firstPlayerStrike);
+        localStorage.setItem('playerOneStrike', 'success');
+      } else if (JSON.parse(this.secondPlayerCruiserPosition).includes(firstPlayerStrike)) {
+        this.firstPlayerHit.push(firstPlayerStrike);
+        localStorage.setItem('playerOneStrike', 'success');
+      } else if (JSON.parse(this.secondPlayerSubmarinePosition).includes(firstPlayerStrike)) {
+        this.firstPlayerHit.push(firstPlayerStrike);
+        localStorage.setItem('playerOneStrike', 'success');
+      } else if (JSON.parse(this.secondPlayerDestroyerPosition).includes(firstPlayerStrike)) {
+        this.firstPlayerHit.push(firstPlayerStrike);
+        localStorage.setItem('playerOneStrike', 'success');
+      } else {
+        this.firstPlayerMiss.push(firstPlayerStrike);
+        localStorage.setItem('playerOneStrike', 'failure');
+        localStorage.setItem('playerTwoStrike', 'success');
+      }
     }
     console.log(this.firstPlayerHit);
+    console.log(localStorage.getItem('playerTwoStrike'));
   }
 
   playerOneStrikeSignal (playerOneGridStrikeValue: string) {

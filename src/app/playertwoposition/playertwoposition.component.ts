@@ -25,6 +25,7 @@ export class PlayertwopositionComponent implements OnInit {
   playerTwoCruiserPosition: string[] = [];
   playerTwoSubmarinePosition: string[] = [];
   playerTwoDestroyerPosition: string[] = [];
+  playerTwoShipPositions: string[] = [];
   @Input() gridTogglar: number;
   @Output() incrementGridTogglar = new EventEmitter<number>();
 
@@ -46,11 +47,12 @@ export class PlayertwopositionComponent implements OnInit {
   positionShip (cellValue: string) {
       if (this.typeOfBattleShipPlayerTwo === 'Carrier') {
         for (var carrierPositionCounter = 0; carrierPositionCounter < 1; carrierPositionCounter++) {
-          if (this.playerTwoCarrierPosition.length < 5 && this.gridTogglar < 17 && !this.playerTwoCarrierPosition.includes(cellValue)) {
+          if (this.playerTwoCarrierPosition.length < 5 && this.gridTogglar < 17 && !this.playerTwoCarrierPosition.includes(cellValue) && !this.playerTwoShipPositions.includes(cellValue)) {
             this.playerTwoCarrierPosition.push(cellValue);
+            this.playerTwoShipPositions.push(cellValue);
             this.onClickIncrement ();
             if (this.playerTwoCarrierPosition.length === 5) {
-              localStorage.setItem('playerTwoCarrierPosition', this.playerTwoCarrierPosition);
+              localStorage.setItem('playerTwoCarrierPosition', JSON.stringify(this.playerTwoCarrierPosition));
             }
           } else {
             break;
@@ -59,11 +61,12 @@ export class PlayertwopositionComponent implements OnInit {
       }
       if (this.typeOfBattleShipPlayerTwo === 'Frigate') {
         for (var frigatePositionCounter = 0; frigatePositionCounter < 1; frigatePositionCounter++) {
-          if (this.playerTwoFrigatePosition.length < 4 && this.gridTogglar < 17 && !this.playerTwoFrigatePosition.includes(cellValue)) {
+          if (this.playerTwoFrigatePosition.length < 4 && this.gridTogglar < 17 && !this.playerTwoFrigatePosition.includes(cellValue) && !this.playerTwoShipPositions.includes(cellValue)) {
             this.playerTwoFrigatePosition.push(cellValue);
+            this.playerTwoShipPositions.push(cellValue);
             this.onClickIncrement ();
             if (this.playerTwoFrigatePosition.length === 4) {
-              localStorage.setItem('playerTwoFrigatePosition', this.playerTwoFrigatePosition);
+              localStorage.setItem('playerTwoFrigatePosition', JSON.stringify(this.playerTwoFrigatePosition));
             }
           } else {
             break;
@@ -72,11 +75,12 @@ export class PlayertwopositionComponent implements OnInit {
       }
       if (this.typeOfBattleShipPlayerTwo === 'Cruiser') {
         for (var cruiserPositionCounter = 0; cruiserPositionCounter < 1; cruiserPositionCounter++) {
-          if (this.playerTwoCruiserPosition.length < 3 && this.gridTogglar < 17 && !this.playerTwoCruiserPosition.includes(cellValue)) {
+          if (this.playerTwoCruiserPosition.length < 3 && this.gridTogglar < 17 && !this.playerTwoCruiserPosition.includes(cellValue) && !this.playerTwoShipPositions.includes(cellValue)) {
             this.playerTwoCruiserPosition.push(cellValue);
+            this.playerTwoShipPositions.push(cellValue);
             this.onClickIncrement ();
             if (this.playerTwoCruiserPosition.length === 3) {
-              localStorage.setItem('playerTwoCruiserPosition', this.playerTwoCruiserPosition);
+              localStorage.setItem('playerTwoCruiserPosition', JSON.stringify(this.playerTwoCruiserPosition));
             }
           } else {
             break;
@@ -85,11 +89,12 @@ export class PlayertwopositionComponent implements OnInit {
       }
       if (this.typeOfBattleShipPlayerTwo === 'Submarine') {
         for (var submarinePositionCounter = 0; submarinePositionCounter < 1; submarinePositionCounter++) {
-          if (this.playerTwoSubmarinePosition.length < 3 && this.gridTogglar < 17 && !this.playerTwoSubmarinePosition.includes(cellValue)) {
+          if (this.playerTwoSubmarinePosition.length < 3 && this.gridTogglar < 17 && !this.playerTwoSubmarinePosition.includes(cellValue) && !this.playerTwoShipPositions.includes(cellValue)) {
             this.playerTwoSubmarinePosition.push(cellValue);
+            this.playerTwoShipPositions.push(cellValue);
             this.onClickIncrement ();
             if (this.playerTwoSubmarinePosition.length === 3) {
-              localStorage.setItem('playerTwoSubmarinePosition', this.playerTwoSubmarinePosition);
+              localStorage.setItem('playerTwoSubmarinePosition', JSON.stringify(this.playerTwoSubmarinePosition));
             }
           } else {
             break;
@@ -98,11 +103,12 @@ export class PlayertwopositionComponent implements OnInit {
       }
       if (this.typeOfBattleShipPlayerTwo === 'Destroyer') {
         for (var destroyerPositionCounter = 0; destroyerPositionCounter < 1; destroyerPositionCounter++) {
-          if (this.playerTwoDestroyerPosition.length < 2 && this.gridTogglar < 17 && !this.playerTwoDestroyerPosition.includes(cellValue)) {
+          if (this.playerTwoDestroyerPosition.length < 2 && this.gridTogglar < 17 && !this.playerTwoDestroyerPosition.includes(cellValue) && !this.playerTwoShipPositions.includes(cellValue)) {
             this.playerTwoDestroyerPosition.push(cellValue);
+            this.playerTwoShipPositions.push(cellValue);
             this.onClickIncrement ();
             if (this.playerTwoDestroyerPosition.length === 2) {
-              localStorage.setItem('playerTwoDestroyerPosition', this.playerTwoDestroyerPosition);
+              localStorage.setItem('playerTwoDestroyerPosition', JSON.stringify(this.playerTwoDestroyerPosition));
             }
           } else {
             break;
