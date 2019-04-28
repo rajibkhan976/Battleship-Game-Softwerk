@@ -9,7 +9,8 @@ export class DashboardComponent implements OnInit {
 
   playerOneGridController: number = 0;
   playerTwoGridController: number = 0;
-  dashBoardViewController: string = 'playerOneGrid';
+  dashBoardViewControllerOne: string = 'playerOneGrid';
+  dashBoardViewControllerTwo: string = '';
   playerOneViewController: string = 'playerOnePositionGrid';
   playerTwoViewController: string = 'playerTwoPositionGrid';
 
@@ -18,7 +19,8 @@ export class DashboardComponent implements OnInit {
   incrementfirstPlayerGridController () {
     this.playerOneGridController++;
     if (this.playerOneGridController === 17) {
-      this.dashBoardViewController = 'playerTwoGrid';
+      this.dashBoardViewControllerOne = '';
+      this.dashBoardViewControllerTwo = 'playerTwoGrid';
       this.playerOneViewController = 'playerTwoStrikeGrid';
     }
   }
@@ -26,7 +28,7 @@ export class DashboardComponent implements OnInit {
   incrementSecondPlayerGridController () {
     this.playerTwoGridController++;
     if (this.playerTwoGridController === 17) {
-      this.dashBoardViewController = 'playerOneGrid';
+      this.dashBoardViewControllerOne = 'playerOneGrid';
       this.playerTwoViewController = 'playerOneStrikeGrid';
     }
   }

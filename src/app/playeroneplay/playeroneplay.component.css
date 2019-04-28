@@ -6,6 +6,7 @@
   margin: 0 auto;
   max-width: 600px;
   min-height: 430px;
+  float: right;
 }
 
 .playerOne {
