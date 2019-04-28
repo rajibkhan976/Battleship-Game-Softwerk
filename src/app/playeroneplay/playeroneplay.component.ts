@@ -7,11 +7,12 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class PlayeroneplayComponent implements OnInit {
 
-  @Input() secondPlayerCarrierPosition: string[];
-  @Input() secondPlayerFrigatePosition: string[];
-  @Input() secondPlayerCruiserPosition: string[];
-  @Input() secondPlayerSubmarinePosition: string[];
-  @Input() secondPlayerDestroyerPosition: string[];
+  secondPlayerCarrierPosition: string[] = localStorage.getItem('playerTwoCarrierPosition');
+  secondPlayerFrigatePosition: string[] = localStorage.getItem('playerTwoFrigatePosition');
+  secondPlayerCruiserPosition: string[] = localStorage.getItem('playerTwoCruiserPosition');
+  secondPlayerSubmarinePosition: string[] = localStorage.getItem('playerTwoSubmarinePosition');
+  secondPlayerDestroyerPosition: string[] = localStorage.getItem('playerTwoDestroyerPosition');
+  @Input() playerOneStrikeGridController: string;
 
   firstPlayerHit: string[] = [];
   firstPlayerMiss: string[] = [];

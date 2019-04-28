@@ -49,6 +49,9 @@ export class PlayertwopositionComponent implements OnInit {
           if (this.playerTwoCarrierPosition.length < 5 && this.gridTogglar < 17 && !this.playerTwoCarrierPosition.includes(cellValue)) {
             this.playerTwoCarrierPosition.push(cellValue);
             this.onClickIncrement ();
+            if (this.playerTwoCarrierPosition.length === 5) {
+              localStorage.setItem('playerTwoCarrierPosition', this.playerTwoCarrierPosition);
+            }
           } else {
             break;
           }
@@ -59,6 +62,9 @@ export class PlayertwopositionComponent implements OnInit {
           if (this.playerTwoFrigatePosition.length < 4 && this.gridTogglar < 17 && !this.playerTwoFrigatePosition.includes(cellValue)) {
             this.playerTwoFrigatePosition.push(cellValue);
             this.onClickIncrement ();
+            if (this.playerTwoFrigatePosition.length === 4) {
+              localStorage.setItem('playerTwoFrigatePosition', this.playerTwoFrigatePosition);
+            }
           } else {
             break;
           }
@@ -69,6 +75,9 @@ export class PlayertwopositionComponent implements OnInit {
           if (this.playerTwoCruiserPosition.length < 3 && this.gridTogglar < 17 && !this.playerTwoCruiserPosition.includes(cellValue)) {
             this.playerTwoCruiserPosition.push(cellValue);
             this.onClickIncrement ();
+            if (this.playerTwoCruiserPosition.length === 3) {
+              localStorage.setItem('playerTwoCruiserPosition', this.playerTwoCruiserPosition);
+            }
           } else {
             break;
           }
@@ -79,6 +88,9 @@ export class PlayertwopositionComponent implements OnInit {
           if (this.playerTwoSubmarinePosition.length < 3 && this.gridTogglar < 17 && !this.playerTwoSubmarinePosition.includes(cellValue)) {
             this.playerTwoSubmarinePosition.push(cellValue);
             this.onClickIncrement ();
+            if (this.playerTwoSubmarinePosition.length === 3) {
+              localStorage.setItem('playerTwoSubmarinePosition', this.playerTwoSubmarinePosition);
+            }
           } else {
             break;
           }
@@ -89,6 +101,9 @@ export class PlayertwopositionComponent implements OnInit {
           if (this.playerTwoDestroyerPosition.length < 2 && this.gridTogglar < 17 && !this.playerTwoDestroyerPosition.includes(cellValue)) {
             this.playerTwoDestroyerPosition.push(cellValue);
             this.onClickIncrement ();
+            if (this.playerTwoDestroyerPosition.length === 2) {
+              localStorage.setItem('playerTwoDestroyerPosition', this.playerTwoDestroyerPosition);
+            }
           } else {
             break;
           }

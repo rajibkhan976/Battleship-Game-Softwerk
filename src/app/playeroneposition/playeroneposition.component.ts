@@ -50,7 +50,7 @@ export class PlayeronepositionComponent implements OnInit {
             this.onClickIncrement ();
             this.playerOneCarrierPosition.push(cellValue);
             if (this.playerOneCarrierPosition.length === 5) {
-              localStorage.setItem('playerOneCarrierPosition', JSON.stringify(this.playerOneCarrierPosition));
+              localStorage.setItem('playerOneCarrierPosition', this.playerOneCarrierPosition);
             }
           } else {
             break;
@@ -63,7 +63,7 @@ export class PlayeronepositionComponent implements OnInit {
             this.onClickIncrement ();
             this.playerOneFrigatePosition.push(cellValue);
             if (this.playerOneFrigatePosition.length === 4) {
-              localStorage.setItem('playerOneFrigatePosition', JSON.stringify(this.playerOneFrigatePosition))
+              localStorage.setItem('playerOneFrigatePosition', this.playerOneFrigatePosition)
             }
           } else {
             break;
@@ -76,7 +76,7 @@ export class PlayeronepositionComponent implements OnInit {
             this.onClickIncrement ();
             this.playerOneCruiserPosition.push(cellValue);
             if (this.playerOneCruiserPosition.length === 3) {
-              localStorage.setItem('playerOneCruiserPosition', JSON.stringify(this.playerOneCruiserPosition));
+              localStorage.setItem('playerOneCruiserPosition', this.playerOneCruiserPosition);
             }
           } else {
             break;
@@ -89,7 +89,7 @@ export class PlayeronepositionComponent implements OnInit {
             this.onClickIncrement ();
             this.playerOneSubmarinePosition.push(cellValue);
             if (this.playerOneSubmarinePosition.length === 3) {
-              localStorage.setItem('playerOneSubmarinePosition', JSON.stringify(this.playerOneSubmarinePosition));
+              localStorage.setItem('playerOneSubmarinePosition', this.playerOneSubmarinePosition);
             }
           } else {
             break;
@@ -102,7 +102,7 @@ export class PlayeronepositionComponent implements OnInit {
             this.onClickIncrement ();
             this.playerOneDestroyerPosition.push(cellValue);
             if (this.playerOneDestroyerPosition.length === 2) {
-              localStorage.setItem('playerOneDestroyerPosition', JSON.stringify(this.playerOneDestroyerPosition));
+              localStorage.setItem('playerOneDestroyerPosition', this.playerOneDestroyerPosition);
             }
           } else {
             break;

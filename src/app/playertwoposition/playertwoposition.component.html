@@ -1,15 +1,9 @@
-<div class="container" [ngSwitch]="toggleGrid">
-  <div class="" *ngSwitchCase="'playerOneStrikeGrid'">
-    <app-playeroneplay
-    [secondPlayerCarrierPosition]="playerTwoCarrierPosition"
-    [secondPlayerFrigatePosition]="playerTwoFrigatePosition"
-    [secondPlayerCruiserPosition]="playerTwoCruiserPosition"
-    [secondPlayerSubmarinePosition]="playerTwoSubmarinePosition"
-    [secondPlayerDestroyerPosition]="playerTwoDestroyerPosition">
-    </app-playeroneplay>
+<div class="container">
+  <div class="">
+    <app-playeroneplay [playerOneStrikeGridController]="toggleGrid"></app-playeroneplay>
   </div>
-  <div class="" *ngSwitchCase="'playerTwoPositionGrid'">
-    <div class="row">
+  <div class="" [ngSwitch]="toggleGrid">
+    <div class="row" *ngSwitchCase="'playerTwoPositionGrid'">
       <div class="col-4">
         <h2 class="text-danger">{{playerTwo}}</h2>
         <div class="battleShipOptions">

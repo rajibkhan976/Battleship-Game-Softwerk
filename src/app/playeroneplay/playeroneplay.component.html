@@ -1,5 +1,5 @@
-<div class="row">
-  <div class="col-12">
+<div class="row" [ngSwitch]="toggleGrid">
+  <div class="col-12" *ngSwitchCase="'playerOneStrikeGrid'">
     <h2 class="text-success">{{playerOne}}</h2>
     <div id="playerOneGrid" class="battleshipGridContainer">
       <div id="horizontalIdentifier">
