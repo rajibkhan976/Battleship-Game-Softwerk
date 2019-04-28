@@ -3,7 +3,7 @@
 }
 
 .battleshipGridContainer {
-  margin: 0 auto;
+  margin: 5% auto;
   max-width: 600px;
   min-height: 430px;
   float: right;
@@ -32,7 +32,7 @@
 
 #horizontalIdentifier span {
   display: inline-block;
-  width: 40px;
+  width: 30px;
   height: 35px;
   text-align: center;
 }

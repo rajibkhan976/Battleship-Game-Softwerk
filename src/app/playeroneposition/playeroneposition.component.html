@@ -5,7 +5,7 @@
   <div class="" [ngSwitch]="toggleGrid">
     <div class="row" *ngSwitchCase="'playerOnePositionGrid'">
       <div class="col-4">
-        <h2 class="text-success">{{playerOne}}</h2>
+        <h2 class="text-success mt-3">{{playerOne}}</h2>
         <div class="battleShipOptions">
           <h3>Select battleship</h3>
           <input [(ngModel)]="typeOfBattleShip" type="radio" id="Carrier" name="Carrier" value="Carrier" (change)="getShipType ()">
