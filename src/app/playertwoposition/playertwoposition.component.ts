@@ -19,7 +19,7 @@ export class PlayertwopositionComponent implements OnInit {
   typeOfBattleShipPlayerTwo: string;
   sizeOfBattleShipPlayerTwo: number;
   instructionTwo: string;
-  toggleGrid: string = 'playerTwoPositionGrid';
+  @Input() toggleGrid: string;
   playerTwoCarrierPosition: string[] = [];
   playerTwoFrigatePosition: string[] = [];
   playerTwoCruiserPosition: string[] = [];
@@ -44,9 +44,6 @@ export class PlayertwopositionComponent implements OnInit {
   }
 
   positionShip (cellValue: string) {
-    if (this.gridTogglar === 17) {
-      this.toggleGrid = 'playerOneStrikeGrid';
-    } else {
       if (this.typeOfBattleShipPlayerTwo === 'Carrier') {
         for (var carrierPositionCounter = 0; carrierPositionCounter < 1; carrierPositionCounter++) {
           if (this.playerTwoCarrierPosition.length < 5 && this.gridTogglar < 17 && !this.playerTwoCarrierPosition.includes(cellValue)) {
@@ -98,7 +95,6 @@ export class PlayertwopositionComponent implements OnInit {
         }
       }
     }
-  }
 
   setClass (cellPosition: string) {
     if (this.playerTwoCarrierPosition.includes(cellPosition)) {

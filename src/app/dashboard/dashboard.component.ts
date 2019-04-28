@@ -10,6 +10,8 @@ export class DashboardComponent implements OnInit {
   playerOneGridController: number = 0;
   playerTwoGridController: number = 0;
   dashBoardViewController: string = 'playerOneGrid';
+  playerOneViewController: string = 'playerOnePositionGrid';
+  playerTwoViewController: string = 'playerTwoPositionGrid';
 
   constructor() { }
 
@@ -17,11 +19,16 @@ export class DashboardComponent implements OnInit {
     this.playerOneGridController++;
     if (this.playerOneGridController === 17) {
       this.dashBoardViewController = 'playerTwoGrid';
+      this.playerOneViewController = 'playerTwoStrikeGrid';
     }
   }
 
   incrementSecondPlayerGridController () {
     this.playerTwoGridController++;
+    if (this.playerTwoGridController === 17) {
+      this.dashBoardViewController = 'playerOneGrid';
+      this.playerTwoViewController = 'playerOneStrikeGrid';
+    }
   }
 
   ngOnInit() {

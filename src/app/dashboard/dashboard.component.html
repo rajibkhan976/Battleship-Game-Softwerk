@@ -1,10 +1,18 @@
 <div class="container">
   <div class="row" [ngSwitch]="dashBoardViewController">
-    <div class="col-6" *ngSwitchCase="'playerOneGrid'">
-      <app-playeroneposition [gridTogglar]="playerOneGridController" (incrementGridTogglar)="incrementfirstPlayerGridController ()"></app-playeroneposition>
+    <div class="" *ngSwitchCase="'playerOneGrid'">
+      <app-playeroneposition
+      [toggleGrid]="playerOneViewController"
+      [gridTogglar]="playerOneGridController"
+      (incrementGridTogglar)="incrementfirstPlayerGridController ()">
+      </app-playeroneposition>
     </div>
-    <div class="col-6" *ngSwitchCase="'playerTwoGrid'">
-      <app-playertwoposition [gridTogglar]="playerTwoGridController" (incrementGridTogglar)="incrementSecondPlayerGridController ()"></app-playertwoposition>
+    <div class="" *ngSwitchCase="'playerTwoGrid'">
+      <app-playertwoposition
+      [toggleGrid]="playerTwoViewController"
+      [gridTogglar]="playerTwoGridController"
+      (incrementGridTogglar)="incrementSecondPlayerGridController ()">
+      </app-playertwoposition>
     </div>
   </div>
 </div>

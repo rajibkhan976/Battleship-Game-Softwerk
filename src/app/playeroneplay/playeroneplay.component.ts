@@ -15,6 +15,7 @@ export class PlayeroneplayComponent implements OnInit {
 
   firstPlayerHit: string[] = [];
   firstPlayerMiss: string[] = [];
+  playerOne: string = 'Player one strike grid';
 
   constructor() { }
 

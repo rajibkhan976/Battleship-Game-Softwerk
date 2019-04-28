@@ -3,12 +3,13 @@
 }
 
 .battleshipGridContainer {
+  margin: 10% auto;
   max-width: 600px;
   min-height: 430px;
 }
 
 .battleShipOptions {
-  margin-top: 5%;
+  margin-top: 10%;
 }
 
 .playerOne {
