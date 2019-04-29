@@ -26,6 +26,7 @@ export class PlayeroneplayComponent implements OnInit {
   playerOneStrike (firstPlayerStrike: string) {
     if (this.firstPlayerHit.length === 17) {
       this.playerOneScoreInfo = 'You have sunk all the ships of your opponent and won the game';
+      localStorage.setItem('playerOneStrike', 'success');
     } else {
       if (localStorage.getItem('playerTwoStrike') === 'failure') {
         if (JSON.parse(this.secondPlayerCarrierPosition).includes(firstPlayerStrike) && !this.firstPlayerHit.includes(firstPlayerStrike)) {

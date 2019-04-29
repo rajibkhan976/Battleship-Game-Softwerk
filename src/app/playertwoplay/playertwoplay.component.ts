@@ -26,6 +26,7 @@ export class PlayertwoplayComponent {
   playerTwoStrike (secondPlayerStrike: string) {
     if (this.secondPlayerHit.length === 17) {
       this.playerTwoScoreInfo = 'You have sunk all the ships of your opponent and won the game';
+      localStorage.setItem('playerTwoStrike', 'success');
     } else {
       if (localStorage.getItem('playerOneStrike') === 'failure') {
         if (JSON.parse(this.firstPlayerCarrierPosition).includes(secondPlayerStrike) && !this.secondPlayerHit.includes(secondPlayerStrike)) {
