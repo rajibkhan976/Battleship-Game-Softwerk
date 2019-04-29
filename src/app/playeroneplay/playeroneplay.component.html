@@ -1,6 +1,11 @@
 <div class="row" [ngSwitch]="playerOneStrikeGridController">
   <div class="col-12" *ngSwitchCase="'playerOneStrikeGrid'">
-    <h2 class="text-success mt-5">{{playerOne}}</h2>
+    <h5 class="text-info mt-3">Status: {{playerOneScoreInfo}}</h5>
+  </div>
+</div>
+<div class="row" [ngSwitch]="playerOneStrikeGridController">
+  <div class="col-12" *ngSwitchCase="'playerOneStrikeGrid'">
+    <h3 class="text-success mt-2">{{playerOne}}</h3>
     <div id="playerOneGrid" class="battleshipGridContainer">
       <div id="horizontalIdentifier">
         <span class="alphabeticIdentifier">A</span>

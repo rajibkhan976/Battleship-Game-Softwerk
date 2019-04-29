@@ -17,32 +17,45 @@ export class PlayeroneplayComponent implements OnInit {
   firstPlayerMiss: string[] = [];
 
   playerOne: string = 'Player one strike grid';
+  playerOneScoreInfo: string = 'No strike have been made yet.';
 
   @Input() playerOneStrikeGridController: string;
 
   constructor() { }
 
   playerOneStrike (firstPlayerStrike: string) {
-    if (localStorage.getItem('playerTwoStrike') === 'failure') {
-      if (JSON.parse(this.secondPlayerCarrierPosition).includes(firstPlayerStrike)) {
-        this.firstPlayerHit.push(firstPlayerStrike);
-        localStorage.setItem('playerOneStrike', 'success');
-      } else if (JSON.parse(this.secondPlayerFrigatePosition).includes(firstPlayerStrike)) {
-        this.firstPlayerHit.push(firstPlayerStrike);
-        localStorage.setItem('playerOneStrike', 'success');
-      } else if (JSON.parse(this.secondPlayerCruiserPosition).includes(firstPlayerStrike)) {
-        this.firstPlayerHit.push(firstPlayerStrike);
-        localStorage.setItem('playerOneStrike', 'success');
-      } else if (JSON.parse(this.secondPlayerSubmarinePosition).includes(firstPlayerStrike)) {
-        this.firstPlayerHit.push(firstPlayerStrike);
-        localStorage.setItem('playerOneStrike', 'success');
-      } else if (JSON.parse(this.secondPlayerDestroyerPosition).includes(firstPlayerStrike)) {
-        this.firstPlayerHit.push(firstPlayerStrike);
-        localStorage.setItem('playerOneStrike', 'success');
-      } else {
-        this.firstPlayerMiss.push(firstPlayerStrike);
-        localStorage.setItem('playerOneStrike', 'failure');
-        localStorage.setItem('playerTwoStrike', 'success');
+    if (this.firstPlayerHit.length === 17) {
+      this.playerOneScoreInfo = 'You have sunk all the ships of your opponent and won the game';
+    } else {
+      if (localStorage.getItem('playerTwoStrike') === 'failure') {
+        if (JSON.parse(this.secondPlayerCarrierPosition).includes(firstPlayerStrike) && !this.firstPlayerHit.includes(firstPlayerStrike)) {
+          this.firstPlayerHit.push(firstPlayerStrike);
+          localStorage.setItem('playerOneStrike', 'success');
+          this.playerOneScoreInfo = 'You have a hit on your oponents Carrier.';
+        } else if (JSON.parse(this.secondPlayerFrigatePosition).includes(firstPlayerStrike) && !this.firstPlayerHit.includes(firstPlayerStrike)) {
+          this.firstPlayerHit.push(firstPlayerStrike);
+          localStorage.setItem('playerOneStrike', 'success');
+          this.playerOneScoreInfo = 'You have a hit on your oponents Frigate.';
+        } else if (JSON.parse(this.secondPlayerCruiserPosition).includes(firstPlayerStrike) && !this.firstPlayerHit.includes(firstPlayerStrike)) {
+          this.firstPlayerHit.push(firstPlayerStrike);
+          localStorage.setItem('playerOneStrike', 'success');
+          this.playerOneScoreInfo = 'You have a hit on your oponents Cruiser.';
+        } else if (JSON.parse(this.secondPlayerSubmarinePosition).includes(firstPlayerStrike) && !this.firstPlayerHit.includes(firstPlayerStrike)) {
+          this.firstPlayerHit.push(firstPlayerStrike);
+          localStorage.setItem('playerOneStrike', 'success');
+          this.playerOneScoreInfo = 'You have a hit on your oponents Submarine.';
+        } else if (JSON.parse(this.secondPlayerDestroyerPosition).includes(firstPlayerStrike) && !this.firstPlayerHit.includes(firstPlayerStrike)) {
+          this.firstPlayerHit.push(firstPlayerStrike);
+          localStorage.setItem('playerOneStrike', 'success');
+          this.playerOneScoreInfo = 'You have a hit on your oponents Destroyer.';
+        } else {
+          if (!this.firstPlayerHit.includes(firstPlayerStrike) && !this.firstPlayerMiss.includes(firstPlayerStrike)) {
+            this.firstPlayerMiss.push(firstPlayerStrike);
+            localStorage.setItem('playerOneStrike', 'failure');
+            localStorage.setItem('playerTwoStrike', 'success');
+            this.playerOneScoreInfo = 'You could not hit any of your oponents ship.';
+          }
+        }
       }
     }
     console.log(this.firstPlayerHit);

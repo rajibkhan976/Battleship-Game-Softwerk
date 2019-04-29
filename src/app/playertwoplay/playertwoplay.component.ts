@@ -17,32 +17,45 @@ export class PlayertwoplayComponent {
   secondPlayerMiss: string[] = [];
 
   playerTwo: string = 'Player two strike grid';
+  playerTwoScoreInfo: string = 'No strike have been made yet.';
 
   @Input() playerTwoStrikeGridController: string;
 
   constructor() { }
 
   playerTwoStrike (secondPlayerStrike: string) {
-    if (localStorage.getItem('playerOneStrike') === 'failure') {
-      if (JSON.parse(this.firstPlayerCarrierPosition).includes(secondPlayerStrike)) {
-        this.secondPlayerHit.push(secondPlayerStrike);
-        localStorage.setItem('playerTwoStrike', 'success');
-      } else if (JSON.parse(this.firstPlayerFrigatePosition).includes(secondPlayerStrike)) {
-        this.secondPlayerHit.push(secondPlayerStrike);
-        localStorage.setItem('playerTwoStrike', 'success');
-      } else if (JSON.parse(this.firstPlayerCruiserPosition).includes(secondPlayerStrike)) {
-        this.secondPlayerHit.push(secondPlayerStrike);
-        localStorage.setItem('playerTwoStrike', 'success');
-      } else if (JSON.parse(this.firstPlayerSubmarinePosition).includes(secondPlayerStrike)) {
-        this.secondPlayerHit.push(secondPlayerStrike);
-        localStorage.setItem('playerTwoStrike', 'success');
-      } else if (JSON.parse(this.firstPlayerDestroyerPosition).includes(secondPlayerStrike)) {
-        this.secondPlayerHit.push(secondPlayerStrike);
-        localStorage.setItem('playerTwoStrike', 'success');
-      } else {
-        this.secondPlayerMiss.push(secondPlayerStrike);
-        localStorage.setItem('playerTwoStrike', 'failure');
-        localStorage.setItem('playerOneStrike', 'success');
+    if (this.secondPlayerHit.length === 17) {
+      this.playerTwoScoreInfo = 'You have sunk all the ships of your opponent and won the game';
+    } else {
+      if (localStorage.getItem('playerOneStrike') === 'failure') {
+        if (JSON.parse(this.firstPlayerCarrierPosition).includes(secondPlayerStrike) && !this.secondPlayerHit.includes(secondPlayerStrike)) {
+          this.secondPlayerHit.push(secondPlayerStrike);
+          localStorage.setItem('playerTwoStrike', 'success');
+          this.playerTwoScoreInfo = 'You have a hit on your oponents Carrier.';
+        } else if (JSON.parse(this.firstPlayerFrigatePosition).includes(secondPlayerStrike) && !this.secondPlayerHit.includes(secondPlayerStrike)) {
+          this.secondPlayerHit.push(secondPlayerStrike);
+          localStorage.setItem('playerTwoStrike', 'success');
+          this.playerTwoScoreInfo = 'You have a hit on your oponents Frigate.';
+        } else if (JSON.parse(this.firstPlayerCruiserPosition).includes(secondPlayerStrike) && !this.secondPlayerHit.includes(secondPlayerStrike)) {
+          this.secondPlayerHit.push(secondPlayerStrike);
+          localStorage.setItem('playerTwoStrike', 'success');
+          this.playerTwoScoreInfo = 'You have a hit on your oponents Cruiser.';
+        } else if (JSON.parse(this.firstPlayerSubmarinePosition).includes(secondPlayerStrike) && !this.secondPlayerHit.includes(secondPlayerStrike)) {
+          this.secondPlayerHit.push(secondPlayerStrike);
+          localStorage.setItem('playerTwoStrike', 'success');
+          this.playerTwoScoreInfo = 'You have a hit on your oponents Submarine.';
+        } else if (JSON.parse(this.firstPlayerDestroyerPosition).includes(secondPlayerStrike) && !this.secondPlayerHit.includes(secondPlayerStrike)) {
+          this.secondPlayerHit.push(secondPlayerStrike);
+          localStorage.setItem('playerTwoStrike', 'success');
+          this.playerTwoScoreInfo = 'You have a hit on your oponents Destroyer.';
+        } else {
+          if (!this.secondPlayerHit.includes(secondPlayerStrike) && !this.secondPlayerMiss.includes(secondPlayerStrike)) {
+            this.secondPlayerMiss.push(secondPlayerStrike);
+            localStorage.setItem('playerTwoStrike', 'failure');
+            localStorage.setItem('playerOneStrike', 'success');
+            this.playerTwoScoreInfo = 'You could not hit any of your oponents ship.';
+          }
+        }
       }
     }
     console.log(this.secondPlayerHit);
